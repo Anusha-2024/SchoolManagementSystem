@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>School Management Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(to bottom, #b3d5f2, #0b3d91);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    .login-container img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .login-container h2 {
+      margin-bottom: 8px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .login-container p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #2563eb;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background-color: #1d4ed8;
+    }
+
+    .login-container .forgot {
+      margin-top: 15px;
+      font-size: 13px;
+    }
+
+    .login-container .forgot a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 13px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIUlEQVR4nGNgwAAoLKTBDDwMZISaIIEYo5gkB3EYhwEAELMAH8w+3nxgAAAAAElFTkSuQmCC" alt="Logo" />
+    <h2>School Management</h2>
+    <p>Please sign in to continue.</p>
+    <form method="post" action="/">
+      <input type="text" name="username" placeholder="Admin ID" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <div class="forgot">
+      Forgot your password? <a href="#">Reset it</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    © 2025 Anusha. All rights reserved.
+  </div>
+
+</body>
+</html>

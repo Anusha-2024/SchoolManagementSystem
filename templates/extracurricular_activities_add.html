@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Add New Extracurricular Activity</h1>
+<form method="post" action="{{ url_for('add_extracurricular_activity') }}">
+    <div class="mb-3">
+        <label for="activity_name" class="form-label">Activity Name</label>
+        <input type="text" class="form-control" id="activity_name" name="activity_name" required />
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Activity</button>
+</form>
+{% endblock %}

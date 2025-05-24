@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Add New Holiday</h1>
+
+<form method="POST" action="{{ url_for('add_holiday') }}">
+    <div class="mb-3">
+        <label for="holiday_name" class="form-label">Holiday Name</label>
+        <input type="text" class="form-control" id="holiday_name" name="holiday_name" required>
+    </div>
+    <div class="mb-3">
+        <label for="holiday_date" class="form-label">Holiday Date</label>
+        <input type="date" class="form-control" id="holiday_date" name="holiday_date" required>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Add Holiday</button>
+    <a href="{{ url_for('holidays') }}" class="btn btn-secondary">Back</a>
+</form>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Add New Mark</h1>
+
+<form method="POST" action="{{ url_for('add_mark') }}">
+    <div class="mb-3">
+        <label for="mark_id" class="form-label">Mark ID</label>
+        <input type="number" class="form-control" id="mark_id" name="mark_id" required>
+    </div>
+    <div class="mb-3">
+        <label for="student_id" class="form-label">Student ID</label>
+        <input type="number" class="form-control" id="student_id" name="student_id" required>
+    </div>
+    <div class="mb-3">
+        <label for="subject_id" class="form-label">Subject ID</label>
+        <input type="number" class="form-control" id="subject_id" name="subject_id" required>
+    </div>
+    <div class="mb-3">
+        <label for="exam_type" class="form-label">Exam Type</label>
+        <input type="text" class="form-control" id="exam_type" name="exam_type" required>
+    </div>
+    <div class="mb-3">
+        <label for="score" class="form-label">Score</label>
+        <input type="number" class="form-control" id="score" name="score" required>
+    </div>
+    <button type="submit" class="btn btn-success">Add Mark</button>
+    <a href="{{ url_for('marks') }}" class="btn btn-secondary">Back</a>
+</form>
+{% endblock %}

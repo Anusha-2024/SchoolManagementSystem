@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Complaints</h1>
+<a href="{{ url_for('add_complaint') }}" class="btn btn-primary mb-3">Add New Complaint</a>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Complaint ID</th>
+            <th>Student ID</th>
+            <th>Issue ID</th>
+            <th>Complaint Date</th>
+            <th>Status ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for complaint in complaints %}
+        <tr>
+            <td>{{ complaint.complaint_id }}</td>
+            <td>{{ complaint.student_id }}</td>
+            <td>{{ complaint.issue_id }}</td>
+            <td>{{ complaint.complaint_date }}</td>
+            <td>{{ complaint.status_id }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

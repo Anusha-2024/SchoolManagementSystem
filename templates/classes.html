@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Classes List</h1>
+<a href="{{ url_for('add_class') }}" class="btn btn-primary mb-3">Add New Class</a>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Class ID</th>
+            <th>Class Name</th>
+            <th>Section</th>
+            <th>Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for class in classes %}
+        <tr>
+            <td>{{ class.class_id }}</td>
+            <td>{{ class.class_name }}</td>
+            <td>{{ class.section }}</td>
+            <td>{{ class.year }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Add New Attendance Record</h1>
+<form method="post" action="{{ url_for('add_attendance') }}">
+    <div class="mb-3">
+        <label for="student_id" class="form-label">Student ID</label>
+        <input type="number" class="form-control" id="student_id" name="student_id" required />
+    </div>
+    <div class="mb-3">
+        <label for="class_id" class="form-label">Class ID</label>
+        <input type="number" class="form-control" id="class_id" name="class_id" required />
+    </div>
+    <div class="mb-3">
+        <label for="attendance_date" class="form-label">Attendance Date</label>
+        <input type="date" class="form-control" id="attendance_date" name="attendance_date" required />
+    </div>
+    <div class="mb-3">
+        <label for="status" class="form-label">Status</label>
+        <select class="form-select" id="status" name="status" required>
+            <option value="" selected disabled>Select Status</option>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+            <option value="Late">Late</option>
+            <option value="Excused">Excused</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Attendance</button>
+</form>
+{% endblock %}

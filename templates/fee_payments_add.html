@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Add New Fee Payment</h1>
+
+<form method="POST" action="{{ url_for('add_fee_payment') }}">
+    <div class="mb-3">
+        <label for="student_id" class="form-label">Student ID</label>
+        <input type="number" class="form-control" id="student_id" name="student_id" required>
+    </div>
+    <div class="mb-3">
+        <label for="amount" class="form-label">Amount</label>
+        <input type="number" step="0.01" class="form-control" id="amount" name="amount" required>
+    </div>
+    <div class="mb-3">
+        <label for="payment_date" class="form-label">Payment Date</label>
+        <input type="date" class="form-control" id="payment_date" name="payment_date" required>
+    </div>
+    <div class="mb-3">
+        <label for="payment_method" class="form-label">Payment Method</label>
+        <input type="text" class="form-control" id="payment_method" name="payment_method" required>
+    </div>
+    <button type="submit" class="btn btn-success">Add Payment</button>
+    <a href="{{ url_for('fee_payments') }}" class="btn btn-secondary">Back</a>
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Add New Event</h1>
+<form method="post" action="{{ url_for('add_event') }}">
+    <div class="mb-3">
+        <label for="info_id" class="form-label">Event Info ID</label>
+        <input type="number" class="form-control" id="info_id" name="info_id" required />
+    </div>
+    <div class="mb-3">
+        <label for="event_date" class="form-label">Event Date</label>
+        <input type="date" class="form-control" id="event_date" name="event_date" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Event</button>
+</form>
+{% endblock %}

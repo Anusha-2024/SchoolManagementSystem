@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Holidays</h1>
+<a href="{{ url_for('add_holiday') }}" class="btn btn-primary mb-3">Add New Holiday</a>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Holiday ID</th>
+            <th>Holiday Name</th>
+            <th>Holiday Date</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for holiday in holidays %}
+        <tr>
+            <td>{{ holiday.holiday_id }}</td>
+            <td>{{ holiday.holiday_name }}</td>
+            <td>{{ holiday.holiday_date.strftime('%Y-%m-%d') if holiday.holiday_date else '' }}</td>
+            <td>{{ holiday.description }}</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="4">No holidays found.</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

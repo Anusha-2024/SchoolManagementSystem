@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Add New Class</h1>
+<form method="post" action="{{ url_for('add_class') }}">
+    <div class="mb-3">
+        <label for="class_name" class="form-label">Class Name</label>
+        <input type="text" class="form-control" id="class_name" name="class_name" required />
+    </div>
+    <div class="mb-3">
+        <label for="section" class="form-label">Section</label>
+        <input type="text" class="form-control" id="section" name="section" required />
+    </div>
+    <div class="mb-3">
+        <label for="year" class="form-label">Year</label>
+        <input type="number" class="form-control" id="year" name="year" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Class</button>
+</form>
+{% endblock %}

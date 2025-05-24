@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Extracurricular Activities</h1>
+<a href="{{ url_for('add_extracurricular_activity') }}" class="btn btn-primary mb-3">Add New Activity</a>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Activity ID</th>
+            <th>Activity Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for activity in activities %}
+        <tr>
+            <td>{{ activity.activity_id }}</td>
+            <td>{{ activity.activity_name }}</td>
+            <td>{{ activity.description }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

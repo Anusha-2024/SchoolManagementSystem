@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Student Events</h1>
+
+<a href="{{ url_for('add_student_event') }}" class="btn btn-primary mb-3">Add New Student Event</a>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Event ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for se in student_events %}
+        <tr>
+            <td>{{ se.student_id }}</td>
+            <td>{{ se.event_id }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

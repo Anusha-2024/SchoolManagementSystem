@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Events</h1>
+<a href="{{ url_for('add_event') }}" class="btn btn-primary mb-3">Add New Event</a>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Event ID</th>
+            <th>Info ID</th>
+            <th>Event Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for event in events %}
+        <tr>
+            <td>{{ event.event_id }}</td>
+            <td>{{ event.info_id }}</td>
+            <td>{{ event.event_date }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -63,3 +63,5 @@ Created by Anusha
 📧 Email: krianusha09@gmail.com
 🐙 GitHub: Anusha-2024
 
+## License
+This project is licensed under the MIT License

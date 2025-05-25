@@ -9,7 +9,7 @@ app.secret_key = 'your_secret_key'  # Needed for session management
 db_config = {
     'host': 'localhost',
     'user': 'root',
-    'password': 'Anusha@root123',
+    'password': 'yourpassword',
     'database': 'db'
 }
 
